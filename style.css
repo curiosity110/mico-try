@@ -104,9 +104,11 @@ a {
   min-height: 78vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 58px 0 88px 0;
   position: relative;
   overflow: hidden;
+  width: 100%;
   background:
     radial-gradient(
       ellipse 1200px 800px at 10% 20%,
@@ -143,12 +145,15 @@ a {
 
 .hero-content {
   max-width: 850px;
+  width: 100%;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Hero Logo */
@@ -160,8 +165,8 @@ a {
 }
 
 .hero-logo {
-  max-width: 2600px;
-  width: 130%;
+  max-width: 600px;
+  width: 90%;
   height: auto;
   filter: drop-shadow(0 10px 30px rgba(199, 227, 95, 0.15));
   transition: all 0.3s ease;
@@ -1707,20 +1712,25 @@ a {
 
   .hero {
     min-height: auto;
-    padding: 100px 0 60px 0;
+    padding: 60px 0 50px 0;
   }
 
   .hero-content {
-    padding: 0 10px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-logo-wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-logo {
-    width: 85%;
-    max-width: 320px;
+    width: 100%;
+    max-width: 350px;
   }
 
   .hero-title {
@@ -1861,40 +1871,47 @@ a {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 90px 0 50px 0;
+    padding: 50px 0 40px 0;
+  }
+
+  .hero-content {
+    padding: 0 15px;
   }
 
   .hero-logo {
-    width: 80%;
-    max-width: 280px;
+    width: 100%;
+    max-width: 300px;
   }
 
   .hero-title {
-    font-size: clamp(1.5rem, 7vw, 2rem);
+    font-size: clamp(1.25rem, 5vw, 1.8rem);
     margin-bottom: 0.5rem;
-    padding: 0 8px;
+    padding: 0;
+    line-height: 1.3;
   }
 
   .hero-title::after {
-    bottom: -8px;
-    width: 25px;
+    bottom: -6px;
+    width: 20px;
   }
 
   .hero-subtitle {
-    font-size: clamp(0.85rem, 3.5vw, 0.95rem);
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    padding: 0 15px;
+    font-size: clamp(0.8rem, 3vw, 0.9rem);
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding: 0;
+    line-height: 1.5;
   }
 
   .hero-cta-center {
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
   }
 
   .hero-cta-center .btn {
     width: 100%;
     padding: 0.9rem 1.5rem;
+    font-size: 0.85rem;
   }
 
   .price-marquee {
